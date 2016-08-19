@@ -78,10 +78,17 @@
 		<Item Name="filter wheel" Type="Folder" URL="../filter wheel">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Craig" Type="Folder">
+			<Item Name="cameraSwitchModeAndSetParamsv2.vi" Type="VI" URL="../LightSheet Mode/cameraSwitchModeAndSetParamsv2.vi"/>
+			<Item Name="Live Capture Functional Stack.vi" Type="VI" URL="../Live Capture Functional Stack.vi"/>
+			<Item Name="Live Capture Functional Stack.7.64bit.vi" Type="VI" URL="../Live Capture Functional Stack.7.64bit.vi"/>
+			<Item Name="Live Capture Functional Stack.8.64bit.vi" Type="VI" URL="../Live Capture Functional Stack.8.64bit.vi"/>
+		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
 		<Item Name="SharedVariables.lvlib" Type="Library" URL="../SharedVariables.lvlib"/>
 		<Item Name="camera_do_waveform_multiD.vi" Type="VI" URL="../camera_do_waveform_multiD.vi"/>
-		<Item Name="4Digit File Incrementer tmp.vi" Type="VI" URL="../../2014_05_28 SPIM controller mathscript two colour.64bit/subvis/4Digit File Incrementer tmp.vi"/>
+		<Item Name="Live Capture Functional Stack2.vi" Type="VI" URL="../Live Capture Functional Stack2.vi"/>
+		<Item Name="Live Capture Functional Stack.9.64bit.vi" Type="VI" URL="../Live Capture Functional Stack.9.64bit.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Append Digital Samples.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDT.llb/Append Digital Samples.vi"/>
@@ -297,13 +304,144 @@
 				<Item Name="DAQmx Wait Until Done.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Wait Until Done.vi"/>
 				<Item Name="DAQmx Create Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/task.llb/DAQmx Create Task.vi"/>
 				<Item Name="DAQmx Control Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Control Task.vi"/>
+				<Item Name="Image Type" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Type"/>
+				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
+				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
+				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
+				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
+				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
+				<Item Name="IMAQ Image.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Image.ctl"/>
+				<Item Name="IMAQ Write Custom Data" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Write Custom Data"/>
+				<Item Name="IMAQ ArrayToImage" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ ArrayToImage"/>
+				<Item Name="IMAQ ImageToArray" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ ImageToArray"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
+				<Item Name="NIMS_Finalize Error.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/ErrorHandling/NIMS_Finalize Error.vi"/>
+				<Item Name="UID Generator.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/Managers/WorkSpace/UID Generator.vi"/>
+				<Item Name="Clear UID.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/Managers/SymbolTable/Clear UID.vi"/>
+				<Item Name="NIMS_NodeEndStatement_Output.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/NodeEndStatement/NIMS_NodeEndStatement_Output.vi"/>
+				<Item Name="NIMS_RunTimeType_From StrictType (excl LVString).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RunTimeType/NIMS_RunTimeType_From StrictType (excl LVString).vi"/>
+				<Item Name="MC_LocalVariableDefStatement_Display.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/LocalVariableDefStatement/MC_LocalVariableDefStatement_Display.vi"/>
+				<Item Name="NIMS_min(RV).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/min/1 input/NIMS_min(RV).vi"/>
+				<Item Name="NIMS_max(RV).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/max/1 input/NIMS_max(RV).vi"/>
+				<Item Name="NIMS_abs(signed).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/abs/NIMS_abs(signed).vi"/>
+				<Item Name="NIMS_is_nan.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/is_nan/NIMS_is_nan.vi"/>
+				<Item Name="NIMS_NodeEndStatement_Get Vector.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/NodeEndStatement/NIMS_NodeEndStatement_Get Vector.vi"/>
+				<Item Name="MergeErrorsWrapper.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath/Functions/Error Handling/MergeErrorsWrapper.vi"/>
+				<Item Name="NIMS_V=zeros(I32,I32).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/zeros/NIMS_V=zeros(I32,I32).vi"/>
+				<Item Name="Create Error.vi" Type="VI" URL="/&lt;vilib&gt;/imathl/engines/lvmath/Functions/Error Handling/Create Error.vi"/>
+				<Item Name="NIMS_Range.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RangeToken/NIMS_Range.vi"/>
+				<Item Name="NIMS_linramp.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/linramp/NIMS_linramp.vi"/>
+				<Item Name="NIMS_length(GV).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/length/NIMS_length(GV).vi"/>
+				<Item Name="NIMS_repeatmx(GM, I32, I32).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/repeatmx/NIMS_repeatmx(GM, I32, I32).vi"/>
+				<Item Name="NIMS_RowToken_M_M.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RowToken/NIMS_RowToken_M_M.vi"/>
+				<Item Name="NIMS_Create Error From Enums.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/ErrorHandling/NIMS_Create Error From Enums.vi"/>
+				<Item Name="NIMS_length(GM).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/length/NIMS_length(GM).vi"/>
+				<Item Name="NIMS M(S,R2).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexRead/NIMS M(S,R2).vi"/>
+				<Item Name="NIMS_Error if Not Equal.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeSupport/NIMS_Error if Not Equal.vi"/>
+				<Item Name="NIMS V(V).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexRead/NIMS V(V).vi"/>
+				<Item Name="NIMS_RowToken_M_SorRV.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RowToken/NIMS_RowToken_M_SorRV.vi"/>
+				<Item Name="NIMS_RowToken_SorRV_M.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RowToken/NIMS_RowToken_SorRV_M.vi"/>
+				<Item Name="NIMS_ArithmeticOperator_plus.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/ArithmeticOperatorToken/NIMS_ArithmeticOperator_plus.vi"/>
+				<Item Name="NIMS_round(DBL-S).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/round/NIMS_round(DBL-S).vi"/>
+				<Item Name="NIMS_V=ones(I32,I32).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/ones/NIMS_V=ones(I32,I32).vi"/>
+				<Item Name="NIMS_Range_R2 - Integer.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RangeToken/NIMS_Range_R2 - Integer.vi"/>
+				<Item Name="MC_CommandStatement_break.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/CommandStatement/MC_CommandStatement_break.vi"/>
+				<Item Name="NIMS_ArithmeticOperator_power(S).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/ArithmeticOperatorToken/NIMS_ArithmeticOperator_power(S).vi"/>
+				<Item Name="NIMS_difference(GV,I32).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/difference/NIMS_difference(GV,I32).vi"/>
+				<Item Name="NIMS_Vector Boolean Index to I32 Index.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/VariableToken/Support/NIMS_Vector Boolean Index to I32 Index.vi"/>
+				<Item Name="NIMS V(V)=V.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexReplace/NIMS V(V)=V.vi"/>
+				<Item Name="NIMS V(R2).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexRead/NIMS V(R2).vi"/>
+				<Item Name="NIMS_quadn_trap(GV).vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/BuiltInFunctions/quadn_trap/NIMS_quadn_trap(GV).vi"/>
+				<Item Name="NIMS V(S)=S.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexReplace/NIMS V(S)=S.vi"/>
+				<Item Name="NIMS V(V)=S.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/IndexReplace/NIMS V(V)=S.vi"/>
+				<Item Name="NIMS_RowToken_CV_CV.vi" Type="VI" URL="/&lt;vilib&gt;/imath/engines/lvmath2/RunTimeEngine/RowToken/NIMS_RowToken_CV_CV.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="tm_setpropertyvalue.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/advanced/tm_setpropertyvalue.vi"/>
+				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
+				<Item Name="tm_getpropertyvalue.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/advanced/tm_getpropertyvalue.vi"/>
+				<Item Name="tm_initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_initialize.vi"/>
+				<Item Name="tm_opencamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_opencamera.vi"/>
+				<Item Name="tm_getrange_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getrange_a.vi"/>
+				<Item Name="tm_getarea_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getarea_a.vi"/>
+				<Item Name="tm_preparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_preparecapture.vi"/>
+				<Item Name="tm_startcapture_b.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_startcapture_b.vi"/>
+				<Item Name="tm_stopcapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_stopcapture.vi"/>
+				<Item Name="tm_unpreparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_unpreparecapture.vi"/>
+				<Item Name="tm_closecamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera.vi"/>
+				<Item Name="tm_deinitialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize.vi"/>
+				<Item Name="tm_waitnextframe.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_waitnextframe.vi"/>
+				<Item Name="tm_getframe_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getframe_a.vi"/>
+				<Item Name="tm_setparameter_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setparameter_a.vi"/>
+				<Item Name="tm_getparameter_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getparameter_a.vi"/>
+				<Item Name="tm_setarea.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setarea.vi"/>
+				<Item Name="tm_getfunctionlist.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getfunctionlist.vi"/>
+				<Item Name="tm_startrecorder.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_startrecorder.vi"/>
+				<Item Name="tm_getrecorderstatus.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_getrecorderstatus.vi"/>
+				<Item Name="tm_stoprecorder.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_stoprecorder.vi"/>
+				<Item Name="tm_opendcimgfile.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_opendcimgfile.vi"/>
+				<Item Name="tm_getdcimgframe.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_getdcimgframe.vi"/>
+				<Item Name="tm_closedcimgfile.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/dcimg/tm_closedcimgfile.vi"/>
 			</Item>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Stack Track.ctl" Type="VI" URL="../subvis/Stack Track.ctl"/>
+			<Item Name="Stack_State.ctl" Type="VI" URL="../subvis/Stack_State.ctl"/>
+			<Item Name="libtiff2_open_w.vi" Type="VI" URL="../libtiff2/libtiff2.llb/libtiff2_open_w.vi"/>
+			<Item Name="libtiff3.dll" Type="Document" URL="../lib/libtiff3.dll"/>
+			<Item Name="4Digit File Incrementer.vi" Type="VI" URL="../subvis/4Digit File Incrementer.vi"/>
+			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="nivision.dll" Type="Document" URL="nivision.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="libtiff2_writeScanLine_U16.vi" Type="VI" URL="../libtiff2/libtiff2.llb/libtiff2_writeScanLine_U16.vi"/>
+			<Item Name="libtiff2_close.vi" Type="VI" URL="../libtiff2/libtiff2.llb/libtiff2_close.vi"/>
+			<Item Name="CTIFFNewFileAndStyle.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFNewFileAndStyle.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleUINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleUINT8.vi"/>
+			<Item Name="CTIFFNewFile.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFNewFile.vi"/>
+			<Item Name="libctiff.dll" Type="Document" URL="../../../../Desktop/camtiff/libctiff.dll"/>
+			<Item Name="CTIFFGetPixelType.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFGetPixelType.vi"/>
+			<Item Name="__CTIFFPixelTypeUINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeUINT8.vi"/>
+			<Item Name="__CTIFFPixelTypeUINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeUINT16.vi"/>
+			<Item Name="__CTIFFPixelTypeUINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeUINT32.vi"/>
+			<Item Name="__CTIFFPixelTypeINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeINT8.vi"/>
+			<Item Name="__CTIFFPixelTypeINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeINT16.vi"/>
+			<Item Name="__CTIFFPixelTypeINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeINT32.vi"/>
+			<Item Name="__CTIFFPixelTypeFLOAT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeFLOAT32.vi"/>
+			<Item Name="__CTIFFPixelTypeFLOAT64.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFPixelTypeFLOAT64.vi"/>
+			<Item Name="CTIFFSetPageStyle.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFSetPageStyle.vi"/>
+			<Item Name="CTIFFError.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFError.vi"/>
+			<Item Name="__CTIFFCloseFile.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFCloseFile.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleUINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleUINT16.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleUINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleUINT32.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleINT8.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleINT16.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleINT32.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleFLOAT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleFLOAT32.vi"/>
+			<Item Name="__CTIFFNewFileAndStyleFLOAT64.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFNewFileAndStyleFLOAT64.vi"/>
+			<Item Name="CTIFFAddNewPage.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFAddNewPage.vi"/>
+			<Item Name="__CTIFFAddNewPageFLOAT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageFLOAT32.vi"/>
+			<Item Name="__CTIFFAddNewPageFLOAT64.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageFLOAT64.vi"/>
+			<Item Name="__CTIFFAddNewPageINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageINT16.vi"/>
+			<Item Name="__CTIFFAddNewPageINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageINT32.vi"/>
+			<Item Name="__CTIFFAddNewPageINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageINT8.vi"/>
+			<Item Name="__CTIFFAddNewPageUINT16.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageUINT16.vi"/>
+			<Item Name="__CTIFFAddNewPageUINT32.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageUINT32.vi"/>
+			<Item Name="__CTIFFAddNewPageUINT8.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/__CTIFFAddNewPageUINT8.vi"/>
+			<Item Name="CTIFFWriteAndClose.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFWriteAndClose.vi"/>
+			<Item Name="CTIFFWriteFile.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFWriteFile.vi"/>
+			<Item Name="CTIFFCloseFile.vi" Type="VI" URL="../../../../Desktop/camtiff/ctiff.llb/CTIFFCloseFile.vi"/>
+			<Item Name="CameraControlTypeDef.ctl" Type="VI" URL="../CameraControlTypeDef.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
