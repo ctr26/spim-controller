@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="15008000">
+<Project Type="Project" LVVersion="16008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="SMProvider.SMVersion" Type="Int">201310</Property>
 	<Item Name="My Computer" Type="My Computer">
@@ -20,6 +20,10 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Consumers" Type="Folder">
+			<Item Name="Camera.vi" Type="VI" URL="../Consumers/Camera.vi"/>
+			<Item Name="Waves.vi" Type="VI" URL="../Consumers/Waves.vi"/>
+		</Item>
 		<Item Name="controls" Type="Folder">
 			<Item Name="CalibrationEnum.ctl" Type="VI" URL="../controls/CalibrationEnum.ctl"/>
 			<Item Name="Camera Properties.ctl" Type="VI" URL="../controls/Camera Properties.ctl"/>
@@ -31,11 +35,17 @@
 			<Item Name="PiFOC State.ctl" Type="VI" URL="../controls/PiFOC State.ctl"/>
 			<Item Name="PinOut.ctl" Type="VI" URL="../controls/PinOut.ctl"/>
 			<Item Name="PinOut2.ctl" Type="VI" URL="../controls/PinOut2.ctl"/>
+			<Item Name="SettingsEnum.ctl" Type="VI" URL="../controls/SettingsEnum.ctl"/>
 			<Item Name="Stack Track.ctl" Type="VI" URL="../controls/Stack Track.ctl"/>
 			<Item Name="Stack_State.ctl" Type="VI" URL="../controls/Stack_State.ctl"/>
 			<Item Name="TiffConsumerState.ctl" Type="VI" URL="../controls/TiffConsumerState.ctl"/>
 			<Item Name="Toptica_States.ctl" Type="VI" URL="../controls/Toptica_States.ctl"/>
 			<Item Name="WaveformModes.ctl" Type="VI" URL="../controls/WaveformModes.ctl"/>
+		</Item>
+		<Item Name="filter wheel" Type="Folder">
+			<Item Name="Libraries" Type="Folder">
+				<Item Name="uart_library.dll" Type="Document" URL="../filter wheel/Libraries/uart_library.dll"/>
+			</Item>
 		</Item>
 		<Item Name="functions" Type="Folder">
 			<Item Name="Homography" Type="Folder"/>
@@ -105,6 +115,9 @@
 				<Item Name="tm_waitnextframe.vi" Type="VI" URL="../Libraries/Hamamatsu Video Capture/tm_waitnextframe.vi"/>
 			</Item>
 		</Item>
+		<Item Name="main" Type="Folder">
+			<Item Name="initWaves.vi" Type="VI" URL="../main/initWaves.vi"/>
+		</Item>
 		<Item Name="Waveforms" Type="Folder">
 			<Item Name="PiezoSignal.v2.vi" Type="VI" URL="../Waveforms/PiezoSignal.v2.vi"/>
 			<Item Name="XY Galvo Generator Underscan.v2.vi" Type="VI" URL="../Waveforms/XY Galvo Generator Underscan.v2.vi"/>
@@ -115,9 +128,27 @@
 			<Item Name="XYZTWaveforms.vi" Type="VI" URL="../Waveforms/XYZTWaveforms.vi"/>
 			<Item Name="XYZWaveforms.vi" Type="VI" URL="../Waveforms/XYZWaveforms.vi"/>
 		</Item>
-		<Item Name="SPIM Controller.vi" Type="VI" URL="../SPIM Controller.vi"/>
+		<Item Name="CalibrationEnum.ctl" Type="VI" URL="../CalibrationEnum.ctl"/>
+		<Item Name="SPIM Controller 2016.vi" Type="VI" URL="../SPIM Controller 2016.vi"/>
+		<Item Name="SPIM.aliases" Type="Document" URL="../SPIM.aliases"/>
+		<Item Name="SPIM.lvlps" Type="Document" URL="../SPIM.lvlps"/>
 		<Item Name="Waveform Example.vi" Type="VI" URL="../Waveform Example.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="tm_closecamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_closecamera.vi"/>
+				<Item Name="tm_deinitialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_deinitialize.vi"/>
+				<Item Name="tm_errorreport.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_errorreport.vi"/>
+				<Item Name="tm_getframe_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_getframe_a.vi"/>
+				<Item Name="tm_initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_initialize.vi"/>
+				<Item Name="tm_opencamera.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_opencamera.vi"/>
+				<Item Name="tm_preparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_preparecapture.vi"/>
+				<Item Name="tm_setinputtrigger.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setinputtrigger.vi"/>
+				<Item Name="tm_setparameter_a.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_setparameter_a.vi"/>
+				<Item Name="tm_startcapture_b.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_startcapture_b.vi"/>
+				<Item Name="tm_stopcapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_stopcapture.vi"/>
+				<Item Name="tm_unpreparecapture.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_unpreparecapture.vi"/>
+				<Item Name="tm_waitnextframe.vi" Type="VI" URL="/&lt;userlib&gt;/Hamamatsu Video Capture/tm_waitnextframe.vi"/>
+			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Append Digital Samples.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDT.llb/Append Digital Samples.vi"/>
 				<Item Name="Append Waveforms.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Append Waveforms.vi"/>
@@ -174,6 +205,8 @@
 				<Item Name="DAQmx Create Channel (CI-Pulse Width).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CI-Pulse Width).vi"/>
 				<Item Name="DAQmx Create Channel (CI-Semi Period).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CI-Semi Period).vi"/>
 				<Item Name="DAQmx Create Channel (CI-Two Edge Separation).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CI-Two Edge Separation).vi"/>
+				<Item Name="DAQmx Create Channel (CI-Velocity-Angular).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CI-Velocity-Angular).vi"/>
+				<Item Name="DAQmx Create Channel (CI-Velocity-Linear).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CI-Velocity-Linear).vi"/>
 				<Item Name="DAQmx Create Channel (CO-Pulse Generation-Frequency).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CO-Pulse Generation-Frequency).vi"/>
 				<Item Name="DAQmx Create Channel (CO-Pulse Generation-Ticks).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CO-Pulse Generation-Ticks).vi"/>
 				<Item Name="DAQmx Create Channel (CO-Pulse Generation-Time).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (CO-Pulse Generation-Time).vi"/>
@@ -330,7 +363,6 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="PiezoSignal.vi" Type="VI" URL="../Waveforms/PiezoSignal.vi"/>
-			<Item Name="Properties Table.vi" Type="VI" URL="../controls/Properties Table.vi"/>
 			<Item Name="RunWaves.vi" Type="VI" URL="../functions/Hardware/RunWaves.vi"/>
 			<Item Name="tmcamcon.dll" Type="Document" URL="tmcamcon.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
